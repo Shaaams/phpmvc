@@ -1,7 +1,7 @@
 <?php
 namespace PHPMVC\CONTROLLERS;
 
-class IndexController
+class IndexController extends AbstractController
 {
     public function defaultAction()
     {

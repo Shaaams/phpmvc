@@ -41,8 +41,8 @@ class FrontController
         }
         $controller = new $controllerClassName();
 
-        if (! method_exists($controller, $actionName)){
-            $actionName = 'Not Found Action';
+        if (!method_exists($controller, $actionName)){
+            $actionName = 'notFoundAction';
         }
         $controller->$actionName();
     }
