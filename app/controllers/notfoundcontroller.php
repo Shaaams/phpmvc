@@ -2,10 +2,7 @@
 
 namespace PHPMVC\CONTROLLERS;
 
-class NotFoundController
+class NotFoundController extends AbstractController
 {
-    public function defaultAction()
-    {
-        
-    }
+   
 }
