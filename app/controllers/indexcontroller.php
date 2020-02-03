@@ -5,6 +5,6 @@ class IndexController
 {
     public function defaultAction()
     {
-        
+        echo 'welcome mvc app';
     }
 }

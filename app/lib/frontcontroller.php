@@ -39,7 +39,12 @@ class FrontController
         if (!class_exists($controllerClassName)){
             $controllerClassName = 'PHPMVC\CONTROLLERS\\NotFoundController';
         }
-        echo $controllerClassName;
+        $controller = new $controllerClassName();
+
+        if (! method_exists($controller, $actionName)){
+            $actionName = 'Not Found Action';
+        }
+        $controller->$actionName();
     }
    
 }
