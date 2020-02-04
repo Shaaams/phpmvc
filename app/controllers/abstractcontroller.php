@@ -28,4 +28,9 @@ class AbstractController
     {
         $this->_params = $params;
     }
+
+    protected function _view()
+    {
+        echo VIEWS_PATH . $this->_controller . DS . $this->_action;
+    }
 }

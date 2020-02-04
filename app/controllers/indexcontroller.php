@@ -5,6 +5,6 @@ class IndexController extends AbstractController
 {
     public function defaultAction()
     {
-        echo 'welcome mvc app';
+        $this->_view();
     }
 }
