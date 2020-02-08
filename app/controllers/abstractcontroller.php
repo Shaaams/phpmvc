@@ -3,12 +3,15 @@
 namespace PHPMVC\CONTROLLERS;
 
 use PHPMVC\LIB\FrontController;
+use PHPMVC\LIB\Template;
 
 class AbstractController
 {
     protected $_controller;
     protected $_action;
     protected $_params;
+    protected $_template;
+
     protected $_data =[];
 
 
@@ -26,6 +29,10 @@ class AbstractController
     {
         $this->_action = $actionName;
     }
+    public function setTemplate($template)
+    {
+        $this->_template = $template;
+    }
 
     public function setParams($params)
     {
@@ -41,6 +48,7 @@ class AbstractController
             $view = VIEWS_PATH . $this->_controller . DS . $this->_action . '.view.php';
             if(file_exists($view)){
                 extract($this->_data);
+                var_dump($this->_template);
                 // require_once TEMP_PATH . 'zheader.php';
                 // require_once TEMP_PATH . 'navbar.php';
                 require_once TEMP_PATH . 'templateheaderstart.php';

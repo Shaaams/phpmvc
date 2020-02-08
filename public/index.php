@@ -2,6 +2,7 @@
 namespace PHPMVC;
 
 use PHPMVC\LIB\FrontController;
+use PHPMVC\LIB\Template;
 
 if(!defined('DS')){
     define('DS', DIRECTORY_SEPARATOR);
@@ -9,7 +10,10 @@ if(!defined('DS')){
 
 require_once '..' . DS . 'app' . DS . 'config' .  DS . 'config.php';
 require_once APP_PATH . DS . 'lib' . DS . 'autoload.php';
-$froncontroller = new FrontController();
+$template_parts = require_once '..' . DS . 'app' . DS . 'config' .  DS . 'tempconfig.php';
+
+$template = new Template();
+$froncontroller = new FrontController($template);
 $froncontroller->dispatch();
 
 // $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

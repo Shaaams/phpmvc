@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <!-- <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="/css/fawsome.min.css">
+    <!-- <link rel="stylesheet" href="/css/fawsome.min.css">
     <link rel="stylesheet" href="/css/googleicons.css">
-    <link rel="stylesheet" href="/css/mainar.css">
+    <link rel="stylesheet" href="/css/mainar.css"> -->
 
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 
