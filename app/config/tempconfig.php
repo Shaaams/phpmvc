@@ -13,7 +13,7 @@ return [
 
         'css'         =>[
 
-            'normalize'  => CSS . 'normalize.php',
+            'normalize'  => CSS . 'normalize.css',
             'fawsome'    => CSS . 'fawsome.min.css',
             'gicons'     => CSS . 'googleicons.css',
             'mainen'     => CSS . 'mainen.css',
@@ -22,13 +22,15 @@ return [
 
         'js'          =>[
 
-            'modernizer' => JS . 'vendor/modernizer-2.8.3.min.js',
+            'modernizer' => JS . 'vendor/modernizr-2.8.3.min.js',
         ]
         ],
     'footer_resources'=>[
 
-        'jquery'         => JS . 'jquery-1.12.0.min.js',
+        'jquery'         => JS . 'vendor/jquery-1.12.0.min.js',
         'helper'         => JS . 'helper.js',
+        // 'datatableen'      => JS . 'datatablesen.js',
+        'datatablear'      => JS . 'datatablesar.js',
         'main'           => JS . 'main.js'
     ]    
 ];

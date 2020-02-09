@@ -47,19 +47,9 @@ class AbstractController
         }else {
             $view = VIEWS_PATH . $this->_controller . DS . $this->_action . '.view.php';
             if(file_exists($view)){
-                extract($this->_data);
-                var_dump($this->_template);
-                // require_once TEMP_PATH . 'zheader.php';
-                // require_once TEMP_PATH . 'navbar.php';
-                require_once TEMP_PATH . 'templateheaderstart.php';
-                require_once TEMP_PATH . 'templateheaderend.php';
-                require_once TEMP_PATH . 'wrapperstart.php';
-                require_once TEMP_PATH . 'header.php';
-                require_once TEMP_PATH . 'nav.php';
-                require_once $view;
-                require_once TEMP_PATH . 'wrapperend.php';
-                require_once TEMP_PATH . 'templatefooter.php';
-                // require_once TEMP_PATH . 'footer.php';
+                $this->_template->setActionViewFile($view);
+                $this->_template->setData($this->_data);
+                $this->_template->renderApp();
             }else{
                 require_once VIEWS_PATH . 'notfound' . DS . 'noview.view.php';
             }

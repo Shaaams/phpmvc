@@ -12,7 +12,7 @@ require_once '..' . DS . 'app' . DS . 'config' .  DS . 'config.php';
 require_once APP_PATH . DS . 'lib' . DS . 'autoload.php';
 $template_parts = require_once '..' . DS . 'app' . DS . 'config' .  DS . 'tempconfig.php';
 
-$template = new Template();
+$template = new Template($template_parts);
 $froncontroller = new FrontController($template);
 $froncontroller->dispatch();
 
