@@ -11,6 +11,7 @@ class AbstractController
     protected $_action;
     protected $_params;
     protected $_template;
+    protected $_language;
 
     protected $_data =[];
 
@@ -32,6 +33,11 @@ class AbstractController
     public function setTemplate($template)
     {
         $this->_template = $template;
+    }
+
+    public function setLanguage($languge)
+    {
+        $this->_language = $languge;
     }
 
     public function setParams($params)

@@ -2,6 +2,7 @@
 namespace PHPMVC;
 
 use PHPMVC\LIB\FrontController;
+use PHPMVC\LIB\Language;
 use PHPMVC\LIB\Template;
 
 if(!defined('DS')){
@@ -13,7 +14,8 @@ require_once APP_PATH . DS . 'lib' . DS . 'autoload.php';
 $template_parts = require_once '..' . DS . 'app' . DS . 'config' .  DS . 'tempconfig.php';
 
 $template = new Template($template_parts);
-$froncontroller = new FrontController($template);
+$languge = new Language();
+$froncontroller = new FrontController($template, $languge);
 $froncontroller->dispatch();
 
 // $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
